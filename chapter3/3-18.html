@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>table 태그와 자손 선택자 주의 사항</title>
+    <style>
+        table > /* tbody */ tr > th {
+                 /* ↑위에꺼 입력해야 색상적용
+                 table 선택자에 스타일을 적용할 때는 자손 선택자를 사용하지 맙시다. */
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>NAME</th>
+            <th>Region</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>    
+            <td>서울특별기 강서구 내발산동</td>
+        </tr> 
+    </table>   
+</body>
+</html>

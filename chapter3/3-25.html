@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>구조 선택자와 관련된 주의 사항</title>
+    <style>
+    li > a:first-child { color: hotpink; }
+    </style>
+</head>
+<body>
+    <li><a href="#">Condrasa</a></li>
+    <li><a href="#">Condrasa</a></li>
+    <li><a href="#">Condrasa</a></li>
+    <li><a href="#">Condrasa</a></li>
+    <li><a href="#">Condrasa</a></li>
+    <li><a href="#">Condrasa</a></li>
+</body>
+</html>
+
+<!-- 
+    
+해결방법
+<style>
+    li:first-child > a { color: hotpink }
+</style>
+
+-->

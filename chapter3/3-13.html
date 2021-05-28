@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>문자열 속성 선택자</title>
+    <style>
+        img[src$=png] { border: 2px solid red; }
+        img[src$=jpg] { border: 2px solid greenyellow; }
+        img[src$=gif] { border: 2px solid blue; }
+    </style>
+</head>
+<body>
+    <img src="#.png" width="200" height="250" />
+    <img src="#.jpg" width="200" height="250" />
+    <img src="#.gif" width="200" height="250" />
+</body>
+</html>

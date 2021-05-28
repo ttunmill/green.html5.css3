@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>상태 선택자와 동위 선택자의 복합 활용</title>
+    <style>
+    input[type=checkbox]:checked + div {
+        height: 0px;
+    }
+
+    div {
+        overflow: hidden;
+        width: 650px; height: 300px;
+
+        -ms-transition-duration: 1s;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        transition-duration: 1s;
+    }
+    </style>
+</head>
+<body>
+    <input type="checkbox" />
+    <div>
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia deserunt, repudiandae labore autem error totam officiis porro ullam atque ipsam aperiam facere dicta et numquam! Cum sunt recusandae nobis temporibus.</p>
+</body>
+</html>
