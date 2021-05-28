@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>부정 선택자</title>
+    <style>
+        input:not([type=password]) {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="password" />
+    <input type="text" />
+    <input type="password" />
+    <input type="text" />
+</body>
+</html>
