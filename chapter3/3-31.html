@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>링크 선택자</title>
+    <style>
+        a { text-decoration: none; }
+        a:visited { color: violet; }
+        a:link::after { content: ' - ' attr(href); }
+    </style>
+</head>
+<body>
+    <h1><a>Nothing</a></h1>
+    <h1><a href="http://hanbit.co.kr">Hanbit Media</a></h1>
+    <h1><a href="https://github.com">Github</a></h1>
+</body>
+</html>
