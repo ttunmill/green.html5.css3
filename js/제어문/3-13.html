@@ -14,26 +14,26 @@
         var down;
         // 최대값
         if ( a > b && a > c ) {
-            a=up;
+            up = a;
         } else if ( b > a && b > c ) {
-            
+            up = b;
         } else if ( c > a && c > b ) {
-            
-        } 
+            up = c;
+        }
+        document.write(up +" (최대값)","<br />");
 
         // 최소값
         if ( a < b && a < c) {
-            a,b,c=down;
+            down = a;
         } else if ( b < a && b < c ) {
-            a,b,c=down;
-        } else if ( c < a && c < b) {
-            a,b,c=down;
-        } 
+            down = b;
+        } else if ( c < a && c < b ) {
+            down = c;
+        }
+        document.write(down +" 최소값","<br />");
         
-        document.write(up,"<br />");
-        document.write(down);
-        
-        
+        document.write(Number(up + down)+ " 합계","<br />");
+        document.write((up + down / 3) + " 평균");
     </script>
 </head>
 <body>

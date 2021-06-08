@@ -13,17 +13,20 @@
         var snack = prompt("허니버터(1300원), 칸쵸(1500원), 프링글스(3000원)")
 
         if (money == 0) {
-            if(money < 0) {
-                alert("돈을 넣어주세요");
-            }
+            alert("돈을 넣어주세요.")
+        } else if (money < 0) {
+            alert("돈을 넣어주세요."),location.reload();
         }
+            
 
         if (snack == "허니버터") {
-            document.write(money - 1300);
+            document.write(money - 1300 + "원");
         } else if(snack == "칸쵸") {
-            document.write(money - 1500);
+            document.write(money - 1500 + "원");
         } else if(snack == "프링글스") {
-            
+            document.write(money - 3000 + "원");
+        } else {
+            alert("해당과자는 존재하지 않습니다."),location.reload();
         }
     </script>
 </head>
