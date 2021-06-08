@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제3</title>
+    <script>
+        var a = 4;
+        
+        var user_a = prompt("학년은?","");
+        var user_b = prompt("점수는?","");
+
+        var good = user_b >= 60
+        var good_1 = user_b >= 70
+        if (a !== user_a) 
+            if(user_b >= 60) {
+                document.write("합격");
+            } else {
+                document.write("불합격");
+            } 
+
+        if (a == user_a) 
+            if(user_b >= 70) {
+                document.write("합격");
+            } else {
+                document.write("불합격");
+            } else if(user_b > 100) {
+                alert("Error");
+                location.reload();
+            } else if(user_b < 0) {
+                alert("Error");
+                location.reload();
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

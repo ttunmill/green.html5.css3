@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보너스 문제</title>
+    <script>
+        var snack
+        var honeybutter = 1300, cancho = 1500 , pringlce = 3000;
+
+        var money = prompt("돈을 넣어주세요","0");
+        var snack = prompt("허니버터(1300원), 칸쵸(1500원), 프링글스(3000원)")
+
+        if (money == 0) {
+            if(money < 0) {
+                alert("돈을 넣어주세요");
+            }
+        }
+
+        if (snack == "허니버터") {
+            document.write(money - 1300);
+        } else if(snack == "칸쵸") {
+            document.write(money - 1500);
+        } else if(snack == "프링글스") {
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
