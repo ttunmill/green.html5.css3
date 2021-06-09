@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,10 +30,10 @@
         } else if ( c < a && c < b ) {
             down = c;
         }
-        document.write(down +" 최소값","<br />");
+        document.write(down +" (최소값)","<br />");
         
-        document.write(Number(up + down)+ " 합계","<br />");
-        document.write((up + down / 3) + " 평균");
+        document.write(Number(up) + Number(down)+ " (합계)","<br />");
+        document.write((Number(up) + Number(down))/3 + " (평균)");
     </script>
 </head>
 <body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var site = prompt("구글, 다음, 네이버중 사이트 이름을 입력하시오.","");
+
+        var url;
+
+        switch(site) {
+            case "구글": url = "www.google.co.kr";
+            break;
+            case "다음": url = "www.daum.net";
+            break;
+            case "네이버": url = "www.naver.com";
+            break;
+
+            default:alert("접근 할수 없는 사이트입니다.")
+        }
+
+        if(url) location.href= "http://" + url;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
