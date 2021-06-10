@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h1>자판기 + 배열 기출변형(단순화)</h1>","<br />");
+        var money = [1500,1300,3000];
+        var snack = ["허니버터","칸쵸","프링글스"];
+
+        var qu = prompt("허니버터(1500원),칸쵸(1300),프링글스(3000)","");
+        var me = prompt("돈을 넣어주세요","0");
+
+        var sum = me - money
+        var noSnack = true;
+
+
+
+        for (i in snack) {
+            if ( qu == snack[i]) {
+                sum = me - money[i];
+                noSnack = false; //flag 속성
+            }
+        }   document.write(qu + "이(가) 나왔습니다 " + sum + " 거스름돈");
+
+        if (noSnack) {
+            alert("Error")
+        }   location.reload();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
