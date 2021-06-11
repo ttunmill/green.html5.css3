@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        var addNum = 0;
+        var auto = setTimeout( function() { addNum++; console.log(addNum);},5000);
 
-        var total;
-
-        for(var i = 1; i < 20; i++) {
-            if(i % 2 == 0 || i % 3 == 0) {
-                total = i
-            }
-        } document.write(total);
     </script>
 </head>
 <body>
