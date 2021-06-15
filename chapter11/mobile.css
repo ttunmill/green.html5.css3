@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* 초기화 */
+*{
+    margin: 0; padding: 0;
+    font: normal 12px 'Dotum';
+}
+a { text-decoration: none; }
+img { border: 0; }
+ul { list-style: none; }
+
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header { background: gray; }
+
+nav { height: 100px; }
+
+section {
+    overflow: hidden;
+}
+
+section > article {
+    float: none;
+    width: 100%
+}
+
+section > article:nth-child(1) {
+    background: green;
+    height: 500px;
+}
+
+section > article:nth-child(2) {
+    background: purple;
+    height: 500px;
+}
+
+footer {
+    height: 100px;
+    background: red;
+}
