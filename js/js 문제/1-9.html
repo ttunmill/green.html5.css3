@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var star=""; 
-  
-        for(var i=1; i<=5; i++){  
-            for(var o=5; o>=1; o--) {
-    
-            star +="*";  
-            console.log(star);  
+
+        for(var i = 0; i < 5; i++){  
+            var star = "";
+
+            for(var o = 0; o > 1; o--) {
+            star += " ";  
             }
+            
+                for(var k = 5; k > o; k--) {
+                    star += "*";   
+                }
+            console.log(star);  
         }
     </script>
 </head>
