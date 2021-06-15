@@ -9,7 +9,7 @@
         var money = [ 1500, 1300, 3000 ];
         var snack = [ "허니버터", "칸쵸", "프링글스" ];
 
-
+        var qus = prompt("허니버터(1500원), 칸쵸(1300원), 프링글스(3000원)");
 
         function showMoney() {
         document.write("돈: ");
@@ -17,10 +17,13 @@
         str = "";
         
         for(var i = 0; i < money.length; i++) {
-        if(i == prompt("넣으실 돈을 입력해주세요."))
-
-
+            if(qus == snack) {
+                document.write("넣으신 돈");
+            } else {
+                alert("머함");
+            }
         }
+        
     }
 
 
