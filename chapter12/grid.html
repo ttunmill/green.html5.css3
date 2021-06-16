@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns:200px 200px 200px;
+            /* minmax 최대 최소 사이즈 지정 */
+            grid-template-rows: minmax(100px auto);
+            /* grid-template-rows: 100px 200px; */
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero vitae qui natus assumenda eveniet nisi repudiandae itaque, mollitia dolores reprehenderit? Laboriosam fuga quod cum excepturi odio vero magnam repellat aliquam?</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet sapiente libero dignissimos architecto asperiores rerum eos sequi aliquid accusamus? Ipsam harum odio incidunt vitae ad sunt iste laborum, modi ex.</div>
+        <div class="items">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid distinctio doloremque voluptatum dignissimos accusamus exercitationem neque nobis tenetur, autem doloribus a expedita, sed laborum fuga nam minus porro, sit ullam?</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus, esse fugit, delectus laborum fugiat quasi quaerat doloremque non ex ullam rem minus, excepturi dolore earum mollitia nam temporibus beatae?</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quis rerum illo, nostrum unde porro ullam assumenda veniam doloremque animi vitae incidunt minus odit hic magnam iusto officia aperiam. Nam.</div>
+    </div>
+</body>
+</html>
