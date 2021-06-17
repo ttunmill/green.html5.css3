@@ -10,20 +10,20 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
-            $("#list_1").parent()
-            .css("border", "2px dashed #f00");
+            $("#wrap h1")
+            .css({
+                "background-color":"yellow",
+                "border":"2px dashed #f00"
+            });
         });
     </script>
-    <h1>인접 관계 선택자</h1>
-    <ul id="wrap">
-        <li>리스트1
-            <ul>
-                <li id="list_1">리스트 1-1</li>
-                <li>리스트 1-2</li>
-            </ul> 
-        </li>
-        <li>리스트2</li>
-        <li>리스트3</li>
-    </ul>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용</p>
+        <section>
+            <h1>하위 요소 선택자</h1>
+            <p>내용</p>
+        </section>
+    </div>
 </body>
 </html>
