@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩 p254</title>
+</head>
+<body>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(document).on('ready', (function() {
+                var h1 = $(".img1").height();
+                console.log("ready :",h1);
+            }));
+
+            $(window).on('load', (function() {
+                var h2 = $(".img1").height();
+                console.log("load :",h2);
+            }));
+        });
+    </script>
+    <p>
+        <img src="https://via.placeholder.com/300x300" class="img1">
+    </p>
+</body>
+</html>

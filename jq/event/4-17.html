@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>p283</title>
+    </head>
+    <body>
+        <script src="../jquery-3.6.0.min.js"></script>
+        <script>
+            $(function() {
+                $("btn_1").on("mousever", function() {
+                    alert("HELLO!");
+                });
+            $(document).on("mouseover","btn_2",function() {
+                alert("WELCOME!");
+            });
+            var btn_2 = $("<p><button class=\"btn_2\">버튼2</button></p>");
+            $("#wrap").append(btn_2);
+
+            $(".del_1").on("click", function() {
+                $(".btn_1").off("mouseover");
+            });
+
+            $(".del_2").on("click", function() {
+                $(document).off("mouseover", "btn_2");
+            });
+        });
+        </script>
+        <div id="wrap">
+            <p><button class="btn_1">버튼1</button></p>
+        </div>
+        <p>
+            <p><button class="del_1">버튼1 이벤트 해제</button></p>
+            <p><button class="del_2">버튼2 이벤트 해제</button></p>
+        </p>
+</body>
+</html>

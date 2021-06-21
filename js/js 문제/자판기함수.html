@@ -10,30 +10,27 @@
         var snack = [ "허니버터", "칸쵸", "프링글스" ];
 
         var qus = prompt("허니버터(1500원), 칸쵸(1300원), 프링글스(3000원)");
+        var mon = prompt("돈을 넣어주세요.")
 
         function showMoney() {
-        document.write("돈: ");
 
-        str = "";
-        
-        for(var i = 0; i < money.length; i++) {
-            if(qus == snack) {
-                document.write("넣으신 돈");
-            } else {
-                alert("머함");
+            var str = 0;
+            for(var i = 0; i < money.length; i++) {
+                str = mon - i
             }
+            document.write(str);
         }
-        
-    }
-
 
 
     function showSnack() {
         document.write("<br />" + "과자: ")
 
+        var str = "";
         for(var i = 0; i < snack.length; i++) {
-        document.write(snack[i] + ", ");
+            if(qus == snack) {
+                
         }
+
     }
 
 

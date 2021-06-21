@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p273</title>
+</head>
+<body>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(document).on("keydown", keyEventFnc);
+            function keyEventFnc(e) {
+                var direct = "";
+
+                switch (e.keyCode) {
+                    case 37:
+                        direct = "LEFT";
+                        break;
+
+                    case 38:
+                        direct = "TOP";
+                        break;
+
+                    case 39:
+                        direct = "RIGHT";
+                        break;
+
+                    case 40:
+                        direct = "BOTTOM";
+                        break;
+                }
+
+                if(direct) $("#user_id").val(direct);
+            }
+        });
+    </script>
+    <p><input type="text" name="user_id" id="user_id"></p>
+</body>
+</html>
