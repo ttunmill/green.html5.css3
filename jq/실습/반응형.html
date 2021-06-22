@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="반응형.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WEB</a></li>
+            <li><a href="#">DESIGN</a></li>
+            <li><a href="#">MAP</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <a href="#" id="trigger">MENU</a>
+    </nav>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            var trigger = $("#trigger");
+            var menu = $("nav ul");
+            //햄버거 메뉴 클릭시
+            $(trigger).on("click", function(e) {
+                e.preventDefault();
+                // 메뉴 슬라이드 토글
+                menu.slideToggle();
+            });
+
+            //브라우저 창의 사이즈가 바뀔때 마다
+            $(window).resize(function() {
+                var w = $(window).width();
+
+                //메뉴창열고 화면 확대하면 nav가 사라지는 버그땜에 만들어줌
+                //menu.slideToggle(); 실행시 display:none 이 남는 버그가 발생함
+                if((w > 320) && (menu.is(':hidden'))) {
+                    //css 해제 (nav ul 제거)
+                    menu.removeAttr('style');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
