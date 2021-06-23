@@ -62,15 +62,33 @@
             });
         });
 
-        //브라이저 크기 변화시 content 부분을 가운데 유지
+        //브라우저 크기 변화시 content 부분을 가운데 유지
         $(window).resize(function() {
-            $(".container").width($(window).width()).height($(window).height());
-            $(".content").each(function() {
-                $(this).css("margin-left", ($(this).width()/2 * -1) + "px")
+            $(".container")
+            .width($(window).width())
+            .height($(window).height());
+
+            $(".content").each(function() { //.each for문이랑 비슷함
+                $(this).css("margin-left", ($(this).width()/2 * -1) + "px") //content 가운데 정렬 공식
                 .css("margin-top", ($(this).height()/2 * -1) + "px");
             });
         });
-    </script>
 
+        //1초에 window resize를 한번만 실행
+        setTimeout(function() {
+            $(window).resize();
+        }, 1000);
+
+        $(".bg-holder").parallaxScroll({
+            friction: 0.3 // 마찰
+        });
+
+        $(".icon img").hover(function() {
+            $(this).attr("src", $(this).attr("src").replace(".png", "_over.png"));
+        }, function() {
+            $(this).attr("src", $(this).attr("src").replace("_over.png", ".png"));
+        });
+        
+    </script>
 </body>
 </html>
