@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt1 {background-color: aqua;}
+        .txt2 {background-color: pink;}
+    </style>
+</head>
+<body>
+    <p><button class="btn1">버튼1</button></p>
+    <span class="txt1">"500px" 이동</span>
+    <p><button class="btn2">버튼2</button></p>
+    <span class="txt2">"50px"씩 이동</span>
+
+
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".txt1")
+            .animate({marginLeft:"300px"},1000);
+
+            $(".txt2").delay(3000)
+            .animate({marginLeft:"300px"},1000);
+
+            $(".btn1").on("click", moveElement);
+
+            function moveElement() {
+                $(".txt3")
+                .animate({marginLeft:"+=50px"},800);
+
+                $(".txt4")
+                .animate({marginLeft:"+=50px"},800);
+                $(".txt4").stop();
+
+                $(".txt5")
+                .animate({marginLeft:"+=50px"},800);
+                $(".txt5").stop(true, true);
+            });
+    </script>
+</body>
+</html>

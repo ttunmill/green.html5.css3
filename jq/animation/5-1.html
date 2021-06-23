@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".btn2").hide();
+
+            $(".btn1").on("click", function() {
+                $(".box").slideUp(1000, "linear" ,
+                function() {
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click", function() {
+                $(".box").slideUp(1000, "swing" ,
+                function() {
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                });
+            });
+        });
+
+        $("btn3").on("click", function() {
+            $(".box").slideToggle(1000, "linear");
+        });
+
+        $("btn4").on("click", function() {
+            $(".box").fadeTo(1000, "linear");
+        });
+
+        $("btn5").on("click", function() {
+            $(".box").fadeTo("fast", 1);
+        });
+
+    </script>
+    <style>
+        .content {
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSlide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0.3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ab voluptatibus corporis aliquid impedit hic, veniam, quae repudiandae consectetur expedita animi dicta, voluptas iusto totam eius? Quis delectus ducimus at.
+        </div>
+    </div>
+    
+</body>
+</html>
