@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@color: red;
+@font_size: 16px;
+
+body {
+    color: @color;
+    font-size: @font_size;
+}
+
+.button {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div {
+    background: red;
+    .button();
+}
