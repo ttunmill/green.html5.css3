@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            position: relative;
+            top: 150px;
+            text-align: center;
+            font-family: 'Courgette', cursive;
+            font-size: 5em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fullscreen Video</h1>
+    
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="./jquery.vide.min.js"></script>
+    <script>
+        $("body").vide({
+            mp4: "../../green.frontend2/실습/fullscreen/videos/stream.mp4",
+            webm: "../../green.frontend2/실습/fullscreen/videos/stream.webm",
+            ogv: "../../green.frontend2/실습/fullscreen/videos/stream.ogv",
+            poster: "../../green.frontend2/실습/fullscreen/videos/stream.jpg"
+    }, { 
+        posterType: "jpg",
+        loop: true,
+        muted: true
+    });
+    </script>
+</body>
+</html>
