@@ -111,14 +111,23 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-    <script src="./js/jquery-3.6.0.min.js"></script>
+<!-- 자바스크립트 -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="./js/jquery.bxslider.min.js"></script>
+    <script>
+        $(function() {
+            var trigger = $("#trigger")
+            var menu = $("nav ul")
+            $(trigger).on("click",function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(".bxslider").bxslider({
+                auto:true,
+                autoHover:true,
+            });
+        });
+    </script>
 </body>
 </html>

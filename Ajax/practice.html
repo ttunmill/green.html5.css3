@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../jq/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $.ajax({
+                url:"practice.json",
+                dataType:"json",    
+                success:function(data) {
+                    if(data.length > 0) {
+                        for(var i in data) {
+                            var $id = data[i].id;
+                            var $first_name = data[i].first_name;
+                            var $last_name = data[i].last_name;
+                            var $email = data[i].email;
+                            var $gender = data[i].gender;
+                            var $password = data[i].password;
+
+                            var go = $("wrap").append(
+                                $(".id").first().append($id),
+                                $(".first").first().append($first_name),
+                                $(".last").first().append($last_name),
+                                $(".email").first().append($email),
+                                $(".gender").first().append($gender),
+                                $(".pas").first().append($password)
+                            )
+                                return go;
+                        }
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <div class="wrap">
+        <h2>회원정보</h2>
+        <p>
+            <span>아이디:</span>
+            <span class="id"></span>
+        </p>
+        <p>
+            <span>첫번째 이름:</span>
+            <span class="first"></span>
+        </p>
+        <p>
+            <span>마지막 이름:</span>
+            <span class="last"></span>
+        </p>
+        <p>
+            <span>이메일:</span>
+            <span class="email"></span>
+        </p>
+        <p>
+            <span>성별:</span>
+            <span class="gender"></span>
+        </p>
+        <p>
+            <span>비밀번호:</span>
+            <span class="pas"></span>
+        </p>
+    </div>
+</body>
+</html>
