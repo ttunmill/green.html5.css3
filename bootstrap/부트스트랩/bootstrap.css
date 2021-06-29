@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f0f1f4;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #737b8a;
+}
+
+h1, h2, h3 ,h4 , h5 ,h6 {
+    color: #2b3242;
+}
+
+h1 {
+    letter-spacing: 0px;
+    font-size: 44px;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+a {
+    color: #0043dc;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #487bef;
+}
