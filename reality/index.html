@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AccuWeather</title>
     <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
@@ -20,7 +20,7 @@
                 <ul class="nav">
                     <li><a href="#">레이더 및 지도</a></li>
                     <li><a href="#">동영상</a></li>
-                    <li><a href="#">약천후 기상</a></li>
+                    <li><a href="#">악천후 기상</a></li>
                     <li><a href="#">개인화된 예보</a></li>
                     <li><a href="#">설정</a></li>
                 </ul>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="trigger">
                     <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></a>
-                    <a href="#" class="mobile close"><i class="fas fa-time fa-lg"></i></a>
+                    <a href="#" class="mobile close"><i class="fas fa-times fa-lg"></i></a>
                 </div>
             </div>
         </div>
@@ -50,59 +50,58 @@
                 <div>스톰 체이서</div>
             </div>
             <div class="lnb">
-                <div>약천후 기상</div>
+                <div>악천후 기상</div>
                 <div>허리케인</div>
             </div>
         </div>
     </header>
-        
-    <!-- 메인 콘텐츠 -->
+    <!-- 콘텐츠 -->
     <div id="main_content">
         <div id="main_top">
             <article>
                 <div>
-                    <img src="https://via.placeholder.com/960x250" alt="광고">
+                    <img src="https://via.placeholder.com/960x250.png" alt="광고">
                 </div>
             </article>
         </div>
         <div id="main_container">
-            <section id="mian_section">
+            <section id="main_section">
                 <article id="weather_map">
                     <h5>대한민국 기상 레이더</h5>
                     <div id="map"></div>
                 </article>
-                <article id="weather_location">
+                <article id="weather_loacation">
                     <h5>대한민국 기상 상태</h5>
                     <div id="forecast">
                         <a href="#" class="location">
                             <span class="q" id="seoul">서울특별시</span>
                             <span class="icon_weather"><img src="img/weather/svg/016-sun.svg" alt="맑음"></span>
-                            <span class="temp">-°C</span>
+                            <span class="temp">-℃</span>
                         </a>
                         <a href="#" class="location">
                             <span class="q" id="incheon">인천광역시</span>
                             <span class="icon_weather"><img src="img/weather/svg/016-sun.svg" alt="맑음"></span>
-                            <span class="temp">-°C</span>
+                            <span class="temp">-℃</span>
                         </a>
                         <a href="#" class="location">
                             <span class="q" id="busan">부산광역시</span>
                             <span class="icon_weather"><img src="img/weather/svg/009-wind-1.svg" alt="바람"></span>
-                            <span class="temp">-°C</span>
+                            <span class="temp">-℃</span>
                         </a>
                         <a href="#" class="location">
                             <span class="q" id="gwangju">광주광역시</span>
                             <span class="icon_weather"><img src="img/weather/svg/007-rain.svg" alt="비"></span>
-                            <span class="temp">-°C</span>
+                            <span class="temp">-℃</span>
                         </a>
                         <a href="#" class="location">
-                            <span class="q" id="jeju">제주특별자치도</span>
+                            <span class="q" id="jeju">제주시</span>
                             <span class="icon_weather"><img src="img/weather/svg/006-cloudy-1.svg" alt="흐림"></span>
-                            <span class="temp">-°C</span>
+                            <span class="temp">-℃</span>
                         </a>
                         <a href="#" class="location">
                             <span class="q" id="jeonju">전주시</span>
-                            <span class="icon_weather"><img src="img/weather/svg/005-storm-1.svg" alt="번개"></span>
-                            <span class="temp">-°C</span>
+                            <span class="icon_weather"><img src="img/weather/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
                         </a>
                     </div>
                 </article>
@@ -114,29 +113,24 @@
             </section>
             <aside id="main_aside">
                 <div>
-                    <img src="https://via.placeholder.com/210x400" alt="광고">
+                    <img src="https://via.placeholder.com/210x400.png" alt="광고">
                 </div>
                 <div>
-                    <img src="https://via.placeholder.com/210x400" alt="광고">
+                    <img src="https://via.placeholder.com/210x400.png" alt="광고">
                 </div>
             </aside>
         </div>
     </div>
-
     <!-- 모바일 메뉴 -->
     <div id="mobile_menu"></div>
-
     <!-- 푸터 -->
     <footer id="main_footer">
-        아아이ㅡㅇ르
+        하단
     </footer>
-    
 
-
-
-    <!-- js 라이브러리 -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <!-- js 아큐웨더 -->
-    <script src="js/main.js"></script>
+<!-- 라이브러리 -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 아큐웨더 -->
+<script src="js/main.js"></script>
 </body>
 </html>

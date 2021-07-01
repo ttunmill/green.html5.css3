@@ -1,21 +1,21 @@
 @charset "UTF-8";
 
 /* 초기화 */
-* { margin: 0; padding: 0; font: normal 13px 'Arial'; }
-
-a { text-decoration: none; }
-
+* {
+    margin: 0; padding: 0;
+    font: normal 13px 'Arial';
+}
+a { text-decoration: none !important; }
 img { border: 0; }
-
 ul { list-style: none; }
 
 /* 헤더 */
+
 #main_header {
-    background: grey;
+    background: gray;
     color: white;
     height: 390px;
 }
-
 
 #main_header a {
     color: white;
@@ -44,12 +44,13 @@ ul { list-style: none; }
     float: left;
     overflow: hidden;
     padding-left: 10px;
-    width: calc(100% - 217px); /* 계산기 css자체에서 제공 */
+    /*217px: 로고, 설정아이콘 영역, 패딩 값을 합친 사이즈 */
+    width: calc(100% - 217px); 
 }
 
 #main_header ul > li {
     float: left;
-    padding: 22px 17px;    
+    padding: 22px 17px;
 }
 
 #main_header ul > li:nth-child(4), li:nth-child(5) {
@@ -59,7 +60,7 @@ ul { list-style: none; }
 #main_header .setting {
     float: right;
     width: 17px;
-    text-align: right;
+    text-align:right;
     padding-top: 12px;
 }
 
@@ -75,7 +76,8 @@ ul { list-style: none; }
     display: none;
 }
 
-/* 액티브 */
+/* active_path, active bar */
+
 #main_header > .active_path {
     position: fixed;
     width: 100%;
@@ -86,14 +88,15 @@ ul { list-style: none; }
 }
 
 #main_header > .active_path > .active_bar {
-    width: 81px;
+    width: 81px; 
     height: 1px;
-    margin: 0;
+    margin: 0px; 
     background: tomato;
     display: none;
 }
 
-/* 하위 메뉴 애니메이션 */
+/* 하위 메뉴 애니매이션 */
+
 #main_header > .lnb_container {
     display: none;
     background: black;
@@ -101,7 +104,7 @@ ul { list-style: none; }
     width: 100%;
     position: fixed;
     top: 61px;
-    z-index: 1;
+    z-index: 1; 
 }
 
 #main_header > .lnb_container > .lnb {
@@ -134,7 +137,6 @@ ul { list-style: none; }
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -144,33 +146,34 @@ ul { list-style: none; }
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
 }
 
-
 /* 콘텐츠 */
 
-
+/* #main_content {
+    background: #D8D8D8;
+} */
 
 /* 푸터 */
+
 #main_footer {
     background: white;
     height: 150px;
 }
 
-
 /* 모바일 메뉴 */
+
 #mobile_menu {
     display: none;
     background: black;
     color: white;
     height: 100vh;
     width: 100vw;
-    overflow: hidden; /* vw, vh사용시 스크롤 현상이 생기는 것을 방지 */
-    position: fixed;
+    overflow: hidden;   /* vw, vh를 사용시 스크롤 현상이 생기는 것 방지 */ 
+    position: fixed;    /* vw, vh를 사용시 스크롤 현상이 생기는 것 방지 */ 
     top: 61px;
 }
 
@@ -178,15 +181,15 @@ ul { list-style: none; }
     color: white;
 }
 
-
 /* 미디어 쿼리 */
-/* 0~767 */
-@media screen and(max-width: 767px) {
-    #main_header .gnb .lnb {
+
+/* 0 ~ 767 */
+@media screen and (max-width: 767px) {
+    #main_header .gnb, .lnb {
         width: 90vw;
     }
 
-    #main_header ul {
+    #main_header ul { 
         display: none;
     }
 
@@ -199,16 +202,16 @@ ul { list-style: none; }
     }
 }
 
-/* 768~1023 */
-@media screen and(min-width: 768px) and (max-width:1023px) {
-    #main_header .gnb .lnb {
+/* 768 ~ 1023 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #main_header .gnb, .lnb {
         width: 90vw;
     }
 }
 
-/* 1024~ */
-@media screen and(min-width:1024px) {
-    #main_header .gnb .lnb {
+/* 1024 ~ */
+@media screen and (min-width: 1024px) {
+    #main_header .gnb, .lnb {
         width: 960px;
     }
 }
