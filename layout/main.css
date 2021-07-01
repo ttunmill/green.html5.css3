@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none !important; }
+img { border: 0; }
+ul { list-style: none; }
+html, body { height: 100%; }
+
+/* wrap */
+#wrap {
+    width: 100%;
+}
+
+/* 헤더 */
+#main_header {
+    background-color: crimson;
+    height: 56px;
+}
+
+#main_header nav {
+    overflow: hidden;
+}
+
+#main_header > nav > .top_outter {
+    float: left;
+    overflow: hidden;
+}
+
+#main_header > nav > .top_outter > .menu, .logo {
+    float: left;
+}
+
+#main_header > nav > .top_outter:first-child {
+    width: 169px;
+    height: 56px;
+    background: white;
+}
+
+#main_header > nav > .top_outter:last-child {
+    width: calc(100% - 169px);
+}
+
+#main_header > nav > .top_outter > .top_inner {
+    float: left;
+    overflow: hidden;
+}
+
+#main_header > nav > .top_outter > .top_inner:nth-child(1) {
+    /* (712 / 904) * 100 = 값 */
+    width: 70%;
+}
+
+#main_header > nav > .top_outter > .top_inner:nth-child(2) {
+    width: 30%;
+}
+
+#main_header > nav > .top_outter > .top_inner > div {
+    float: left;
+}
+
+
+/* 콘텐츠 */
+#main_content {
+    overflow: hidden;
+    width: 100%;
+}
+
+#main_content > #main_aside {
+    float: left;
+    background-color: bisque;
+    /* (자식태그px / 부모태그px) * 100 = 결과값 */
+    /* (240 / 1904) * 100 = 값 */
+    width: 12.605042%;
+    overflow-y: scroll;
+}
+
+/* -------------스크롤바 꾸며주기-------------------- */
+#main_content > #main_aside::-webkit-scrollbar {
+    width: 10px;
+}
+
+#main_content > #main_aside::-webkit-scrollbar-thumb {
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+}
+
+#main_content > #main_aside::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+/* ------------------------------------------------ */
+
+#main_content > #main_aside > .menu_list {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 15px 0;
+}
+
+#main_content > #main_aside > .menu_list li {
+    margin: 15px 0;
+}
+
+#main_content > #main_video {
+    float: left;
+    /* (자식태그px / 부모태그px) * 100 = 결과값 */
+    /* (1664 / 1904) * 100 = 값 */
+    width: 87.394957%;
+}
+
+#main_content > #main_video > div:nth-child(1) {
+    background-color: cornflowerblue;
+}
+
+#main_content > #main_video > div:nth-child(2) {
+    background-color: crimson;
+}
+

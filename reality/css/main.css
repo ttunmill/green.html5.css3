@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* 메인 콘텐츠 */
+#mian_content {
+    background: #D8D8D8;
+}
+
+#main_cotent > div {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 메인 section 공통 */
+#main_content > #main_container > section {
+    width: 730px;
+    float: left;
+}
+
+/* 메인 article 공통 */
+#main_content > #maon_container > section > article {
+    width: 90%;
+}
+
+/* 메인 지도(기상 레이더) */
+#main_content > #main_container > section > #weather_map {
+    height: 400px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+#main_content > #main_container > section > #weather_map > #map {
+    width: 90%;
+    height: 360px;
+    z-index: 0 !important; /* 지도 index 반드시 지정 해줘야함 */
+    margin: 0 auto;
+}
+
+/* 메인 날씨(기상 상태) */
+#main_content > #main_container > section > #weather_location {
+    height: 400px;
+    margin-bottom: 20px;
+    background: #D8D8D8;
+}
+
+#main_content > #main_container > section > #weather_location a {
+    display: inline-block;
+    width: calc(50% - 8px);
+    height: 51px;
+    background: white;
+    margin: 2px;
+}
+
+#main_content > #main_container > section > #weather_location a span {
+    display: inline-block;
+    font-size: 18px;
+}
+
+#main_content > #main_container > section > #weather_location a span:nth-child(1) {
+    width: 60%;
+}
+
+#main_content > #main_container > section > #weather_location a span:nth-child(2) {
+    width: 20%;
+}
+
+#main_content > #main_container > section > #weather_location a span:nth-child(3) {
+    width: 15%;
+}
+
+#main_content > #main_container > section > #weather_location a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 메인 추가기상 예보 */
+#main_content > #main_container > section > #weather_add {
+    height: 50px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+/* 메인 aside 공통 */
+#main_content > #main_container > aside {
+    width: 210px;
+    float: right;
+}
+
+/* 미디어 쿼리 */
+/* 0~767 */
+@media screen and(max-width: 767px) {
+    #main_content > div {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section > article {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section > #weather_location a {
+        width: 100%;
+    }
+
+    #main_content > #main_container > aside {
+        float: none;
+    }
+}
+
+
+/* 768~1023 */
+@media screen and(min-width: 768px) and (max-width:1023px) {
+    #main_content > div {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section {
+        width: calc(100% - 210px);
+    }
+}
+
+/* 1024~ */
+@media screen and(min-width:1024px) {
+    
+}
